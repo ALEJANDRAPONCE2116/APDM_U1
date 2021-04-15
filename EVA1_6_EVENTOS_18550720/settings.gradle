@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "EVA_1_6_EVENTOS_18550720"

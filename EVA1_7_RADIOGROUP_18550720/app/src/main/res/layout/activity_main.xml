@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rdGrpComida"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10px">
+
+        <RadioButton
+            android:id="@+id/btnMontados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Montados" />
+
+        <RadioButton
+            android:id="@+id/btnBurritos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Burritos" />
+
+        <RadioButton
+            android:id="@+id/btnAlitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alitas" />
+
+        <RadioButton
+            android:id="@+id/btnGarnachas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Garnachas" />
+
+        <RadioButton
+            android:id="@+id/btnTacos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tacos" />
+
+        <RadioButton
+            android:id="@+id/btnPizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza" />
+
+    </RadioGroup>
+
+</LinearLayout>
