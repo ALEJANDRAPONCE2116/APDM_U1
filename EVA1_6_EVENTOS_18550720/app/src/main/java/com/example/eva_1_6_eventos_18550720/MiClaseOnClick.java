@@ -7,13 +7,15 @@ import android.widget.Toast;
 
 public class MiClaseOnClick implements View.OnClickListener {
     Context context;
-   /* MainActivity activity;
-    MiClaseOnClick (MainActivity mainActivity){
-        this.activity = mainActivity;
-    }*/
+
+
     @Override
-    public void onClick(View view) {
-       // Toast.makeText() //como pasar contexto main activity a mi clase onclick
+    public void onClick(View v) {
+        Toast.makeText(context, "EVENTO POR CLASE", Toast.LENGTH_LONG).show();
     }
 
+    public void setContext(Context context) {
+
+        this.context = context;
+    }
 }
