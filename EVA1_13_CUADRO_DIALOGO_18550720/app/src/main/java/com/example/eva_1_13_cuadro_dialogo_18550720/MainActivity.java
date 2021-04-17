@@ -60,12 +60,21 @@ public class MainActivity extends AppCompatActivity {
         btnAccion=dIMiCuadroDialogo.findViewById(R.id.BtnAccion);
 
         txtVwTitulo.setText("Este es un cuadro de dialogo");
+        btnAccion.setOnClickListener(
         new  View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),edTxtDatos.getText().toString(),
-                        Toast.LENGTH_SHORT)
+                Toast.makeText(getApplicationContext(), edTxtDatos.getText().toString(), Toast.LENGTH_SHORT).show();
+                dIMiCuadroDialogo.dismiss();
             }
         }
+        );
+        dIMiCuadroDialogo.show();
     }
 }
+            /*public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),edTxtDatos.getText().toString(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    }*/
