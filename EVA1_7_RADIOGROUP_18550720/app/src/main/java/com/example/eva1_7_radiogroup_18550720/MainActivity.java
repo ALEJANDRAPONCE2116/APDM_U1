@@ -15,7 +15,7 @@ RadioGroup rdGrpComida;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         rdGrpComida = findViewById(R.id.rdGrpComida);
-        //
+        //Asignar listener
         rdGrpComida.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() { //se activa cuando hay un cambio de seleccion
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) { //i ayuda a identificar cual evento (RadioGroup) vamos a recibir, se recibe el id (i)
@@ -34,12 +34,11 @@ RadioGroup rdGrpComida;
                         break;
                     case  R.id.btnTacos:
                         Toast.makeText(getApplicationContext(),"Tacos",Toast.LENGTH_SHORT).show();
-
                 }*/
-                //forma corta
-                RadioButton rdBtnsel;
-                rdBtnsel = findViewById(i);
-                Toast.makeText(getApplicationContext(),rdBtnsel.getText(), Toast.LENGTH_SHORT).show();
+                //Esto en lugar de un Switch-Case
+                RadioButton rdBtnsel; //declaro rdbtn seleccionado
+                rdBtnsel = findViewById(i); //regresa rdbtn seleccionado
+                Toast.makeText(getApplicationContext(),rdBtnsel.getText(), Toast.LENGTH_SHORT).show(); //recupero texto (getText)
             }
         });
     }

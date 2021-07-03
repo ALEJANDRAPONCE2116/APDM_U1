@@ -11,16 +11,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ClimaAdaptador extends ArrayAdapter <Clima> {
     private Context context;
     private int layout;
-    private Clima [] cCiudades;
+    private List<Clima> cCiudades;
 
-    public ClimaAdaptador(@NonNull Context context, int resource, @NonNull Clima[] objects) {
+    public ClimaAdaptador(@NonNull Context context, int resource, @NonNull List objects) {
         super(context, resource, objects);
         this.context=context;
         this.layout=resource;
-        this.cCiudades=objects;
+        this.cCiudades= objects;
     }
 
     @NonNull
@@ -41,12 +44,12 @@ public class ClimaAdaptador extends ArrayAdapter <Clima> {
         txtVWDesc=convertView.findViewById(R.id.txtVwDesc);
         txtVwTemp=convertView.findViewById(R.id.txtVwtemp);
 
-        //llenar los widgets con datos (arreglo CCiudades)
-        imgVWClima.setImageResource(cCiudades[position].getImagen());
-        txtVwCd.setText(cCiudades[position].getCiudad());
-        txtVwTemp.setText(cCiudades[position].getTemp()+"°C");
-        txtVWDesc.setText(cCiudades[position].getDesc());
-
+        //llenar los widgets con datos (lista CCiudades)
+        Clima climaCiudad = cCiudades.get(position);
+        imgVWClima.setImageResource(climaCiudad.getImagen());
+        txtVwCd.setText(climaCiudad.getCiudad());
+        txtVwTemp.setText(climaCiudad.getTemp()+"°C");
+        txtVWDesc.setText(climaCiudad.getDesc());
         return convertView;
 
 
